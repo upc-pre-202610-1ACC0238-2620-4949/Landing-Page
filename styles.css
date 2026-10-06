@@ -443,6 +443,37 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.team-member-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 48px auto 0;
+    padding: 0 20px;
+}
+
+.team-member {
+    margin: 0;
+    text-align: center;
+}
+
+.team-member img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member figcaption {
+    margin-top: 10px;
+    color: #1f2937;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
 
 
 /* Beneficios  */
@@ -837,7 +868,7 @@ body {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 350px;
     gap: 16px;
     max-width: 1400px;
@@ -1300,6 +1331,13 @@ body.lang-es textarea[data-placeholder-es]::placeholder { color: transparent; }
         gap: 48px;
         padding: 32px 24px;
         margin: 0 8px;
+    }
+
+    .team-member-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+        padding: 0 24px;
+        margin-top: 16px;
     }
     
     .benefits-grid {
