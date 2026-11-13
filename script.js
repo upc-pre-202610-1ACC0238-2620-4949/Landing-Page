@@ -47,5 +47,14 @@ document.querySelectorAll('.nav-menu a').forEach((link) => {
   });
 });
 
+document.querySelector('#contactForm')?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const message = document.body.classList.contains('lang-es')
+    ? '¡Mensaje enviado! Te contactaremos pronto.'
+    : 'Message sent! We will contact you soon.';
+  window.alert(message);
+  event.currentTarget.reset();
+});
+
 setLanguage(localStorage.getItem('preferredLanguage') || 'es');
 updateBackButton();
